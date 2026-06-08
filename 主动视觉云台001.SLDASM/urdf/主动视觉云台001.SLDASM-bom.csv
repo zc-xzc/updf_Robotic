@@ -1,0 +1,4 @@
+link,parent_joint,parent_joint_type,mass_kg,com_x,com_y,com_z,ixx,iyy,izz,ixy,ixz,iyz,inertia_eig_1,inertia_eig_2,inertia_eig_3,visual_meshes,collision_meshes,missing_meshes
+Empty_Link1,joint1,continuous,0.025487,0.023791,-0.020948,-0.034508,0.000009,0.000012,0.000006,0.000001,0.000003,-0.000001,0.000013,0.000011,0.000003,d:\Desktop\部件1.SLDASM\meshes\Empty_Link1.STL,d:\Desktop\部件1.SLDASM\meshes\Empty_Link1.STL,
+Empty_Link2,joint2,continuous,0.047767,-0.033006,-0.000974,-0.008749,0.000032,0.000033,0.000005,0,0,0,0.000033,0.000032,0.000005,d:\Desktop\部件1.SLDASM\meshes\Empty_Link2.STL,d:\Desktop\部件1.SLDASM\meshes\Empty_Link2.STL,
+base_link,,,0.038097,0.324016,-0.292687,0.055139,0.000044,0.00003,0.000045,-0.000001,0.000001,0.00002,0.000059,0.000044,0.000016,d:\Desktop\部件1.SLDASM\meshes\base_link.STL,d:\Desktop\部件1.SLDASM\meshes\base_link.STL,

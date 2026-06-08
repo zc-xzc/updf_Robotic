@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="部件1.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.324016188638054 -0.29268749854922 0.0551391894556958"
+        rpy="0 0 0" />
+      <mass
+        value="0.0380967367917282" />
+      <inertia
+        ixx="4.4369451739139E-05"
+        ixy="-1.29241907142882E-06"
+        ixz="9.27859775427472E-07"
+        iyy="2.95335995758148E-05"
+        iyz="2.00567888139299E-05"
+        izz="4.54076075878791E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://部件1.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://部件1.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Empty_Link1">
+    <inertial>
+      <origin
+        xyz="0.0237905017278396 -0.0209478534637865 -0.0345077237632563"
+        rpy="0 0 0" />
+      <mass
+        value="0.0254874630685235" />
+      <inertia
+        ixx="9.29165937948299E-06"
+        ixy="1.06500899082607E-06"
+        ixz="3.46808410209245E-06"
+        iyy="1.2414708323279E-05"
+        iyz="-9.93075398035609E-07"
+        izz="5.71020781010046E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://部件1.SLDASM/meshes/Empty_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://部件1.SLDASM/meshes/Empty_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="0.311943591251181 -0.100633750400905 -0.334498575224349"
+      rpy="3.13514970526813 0.966999687757827 -1.57862311985778" />
+    <parent
+      link="base_link" />
+    <child
+      link="Empty_Link1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Empty_Link2">
+    <inertial>
+      <origin
+        xyz="-0.0330059403313637 -0.000974210089246225 -0.00874934735000482"
+        rpy="0 0 0" />
+      <mass
+        value="0.0477668295118638" />
+      <inertia
+        ixx="3.21292611931555E-05"
+        ixy="-2.8112424014203E-08"
+        ixz="-1.56259953290781E-07"
+        iyy="3.28622306412358E-05"
+        iyz="1.05351217752151E-07"
+        izz="5.33814835133335E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://部件1.SLDASM/meshes/Empty_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://部件1.SLDASM/meshes/Empty_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0.0302544414057004 -0.00875648364365722 -0.0706864263465496"
+      rpy="-1.57474578623967 -0.580496841285354 -3.14159265358977" />
+    <parent
+      link="Empty_Link1" />
+    <child
+      link="Empty_Link2" />
+    <axis
+      xyz="0 0.00394944917735483 -0.999992200895185" />
+  </joint>
+</robot>
