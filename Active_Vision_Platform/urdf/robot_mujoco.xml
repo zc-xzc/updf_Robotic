@@ -17,34 +17,34 @@
   <compiler angle="radian" />
 
   <asset>
-    <material name="" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    <material name="visualgeom" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
     <material name="default_material" rgba="0.7 0.7 0.7 1" />
     <material name="collision_material" rgba="1.0 0.28 0.1 0.9" />
-    <mesh name="base_link.STL" file="./meshes/base_link.STL" />
-    <mesh name="Empty_Link1.STL" file="./meshes/Empty_Link1.STL" />
-    <mesh name="Empty_Link2.STL" file="./meshes/Empty_Link2.STL" />
+    <mesh name="base_link.obj" file="./meshes/base_link.obj" />
+    <mesh name="Empty_Link1.obj" file="./meshes/Empty_Link1.obj" />
+    <mesh name="Empty_Link2.obj" file="./meshes/Empty_Link2.obj" />
   </asset>
 
   <worldbody>
-    <body name="base_link" pos="0.00000000 0.00000000 0.33450000" quat="1 0 0 0" childclass="robot">
-      <freejoint name="floating_base" />
-      <geom name="base_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="base_link.STL" class="collision" />
-      <geom name="base_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="" type="mesh" mesh="base_link.STL" class="visual" />
+    <body name="base_link" pos="0.00000000 0.00000000 0.33450000" childclass="robot">
+      <inertial pos="0.317477964520347 -0.330969894003123 0.175977174132142" mass="0.175" diaginertia="0.000583456354562162 0.000640864540576776 0.000161784736864578" />
+      <geom name="base_link_collision" type="mesh" mesh="base_link.obj" class="collision" />
+      <geom name="base_link_visual" type="mesh" mesh="base_link.obj" material="visualgeom" class="visual" />
       <body name="Empty_Link1" pos="0.31194 -0.10063 -0.3345" quat="-0.32797432617233774 0.6246739242891658 -0.6274251550311 -0.32947382979407475">
-        <joint name="joint1" type="hinge" ref="0.0" class="motor" axis="0 0 -1" />
-        <inertial pos="0.317477964520347 -0.330969894003123 0.175977174132142" quat="1.0 0.0 0.0 0.0" mass="0.175" diaginertia="0.000583456354562162 0.000640864540576776 0.000161784736864578" />
-        <geom name="Empty_Link1_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="Empty_Link1.STL" class="collision" />
-        <geom name="Empty_Link1_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="" type="mesh" mesh="Empty_Link1.STL" class="visual" />
+        <joint name="joint1" type="hinge" class="motor" axis="0 0 -1" />
+        <inertial pos="0.317477964520347 -0.330969894003123 0.175977174132142" mass="0.175" diaginertia="0.000583456354562162 0.000640864540576776 0.000161784736864578" />
+        <geom name="Empty_Link1_collision" type="mesh" mesh="Empty_Link1.obj" class="collision" />
+        <geom name="Empty_Link1_visual" type="mesh" mesh="Empty_Link1.obj" material="visualgeom" class="visual" />
         <body name="Empty_Link2" pos="0.030254 -0.0087565 -0.070686" quat="-0.20276523400275737 -0.20197027798886577 0.6788520501921232 -0.6762057088185948">
-          <joint name="joint2" type="hinge" ref="0.0" class="motor" axis="0 0 -1" />
-          <inertial pos="0.317477964520347 -0.330969894003123 0.175977174132142" quat="1.0 0.0 0.0 0.0" mass="0.175" diaginertia="0.000583456354562162 0.000640864540576776 0.000161784736864578" />
-          <geom name="Empty_Link2_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="Empty_Link2.STL" class="collision" />
-          <geom name="Empty_Link2_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="" type="mesh" mesh="Empty_Link2.STL" class="visual" />
+          <joint name="joint2" type="hinge" class="motor" axis="0 0 -1" />
+          <inertial pos="0.317477964520347 -0.330969894003123 0.175977174132142" mass="0.175" diaginertia="0.000583456354562162 0.000640864540576776 0.000161784736864578" />
+          <geom name="Empty_Link2_collision" type="mesh" mesh="Empty_Link2.obj" class="collision" />
+          <geom name="Empty_Link2_visual" type="mesh" mesh="Empty_Link2.obj" material="visualgeom" class="visual" />
         </body>
       </body>
-      <site name="base_link_site" pos="0 0 0" quat="1 0 0 0" />
-      <camera name="front_camera" mode="track" fovy="90.0" quat="4.329637285359678e-17 4.329637285359677e-17 0.7071067811865475 0.7071067811865476" pos="0.0 2.0 0.5" />
-      <camera name="side_camera" mode="track" fovy="90.0" quat="-0.5 -0.4999999999999999 0.5 0.5000000000000001" pos="-2.0 0.0 0.5" />
+      <camera name="closeup" pos="0.15 0.15 0.25" quat="0.65 0.28 0.2 0.68" />
+      <camera name="front" pos="0.0 0.35 0.15" quat="0.71 0.0 0.0 0.71" />
+      <camera name="side" pos="-0.35 0.0 0.15" quat="0.5 -0.5 0.5 0.5" />
     </body>
   </worldbody>
 
@@ -57,12 +57,4 @@
     <exclude body1="base_link" body2="Empty_Link1" />
     <exclude body1="Empty_Link1" body2="Empty_Link2" />
   </contact>
-
-  <sensor>
-    <framepos name="base_link_site_pos" objtype="site" objname="base_link_site" />
-    <framequat name="base_link_site_quat" objtype="site" objname="base_link_site" />
-    <framelinvel name="base_link_site_linvel" objtype="site" objname="base_link_site" />
-    <frameangvel name="base_link_site_angvel" objtype="site" objname="base_link_site" />
-    <velocimeter name="base_link_site_vel" site="base_link_site" />
-  </sensor>
 </mujoco>
