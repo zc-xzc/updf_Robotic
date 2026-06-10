@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(主动视觉云台001.SLDASM)
+project(Active Vision Platform)
 
 find_package(catkin REQUIRED)
 

@@ -3,7 +3,7 @@
     name="model" />
   <param
     name="robot_description"
-    textfile="$(find 主动视觉云台001.SLDASM)/urdf/主动视觉云台001.SLDASM.urdf" />
+    textfile="$(find Active Vision Platform)/urdf/Active Vision Platform.urdf" />
   <node
     name="joint_state_publisher_gui"
     pkg="joint_state_publisher_gui"
@@ -16,5 +16,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find 主动视觉云台001.SLDASM)/urdf.rviz" />
+    args="-d $(find Active Vision Platform)/urdf.rviz" />
 </launch>

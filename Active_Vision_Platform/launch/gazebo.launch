@@ -10,7 +10,7 @@
     name="spawn_model"
     pkg="gazebo_ros"
     type="spawn_model"
-    args="-file $(find 主动视觉云台001.SLDASM)/urdf/主动视觉云台001.SLDASM.urdf -urdf -model 主动视觉云台001.SLDASM"
+    args="-file $(find Active_Vision_Platform)/urdf/Active_Vision_Platform.urdf -urdf -model Active_Vision_Platform"
     output="screen" />
   <node
     name="fake_joint_calibration"
